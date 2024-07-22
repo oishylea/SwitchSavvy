@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:to_do_app/components/button.dart';
 
 class IntroPage extends StatelessWidget {
   const IntroPage({super.key});
@@ -11,7 +12,7 @@ class IntroPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 255, 248, 191),
       body: Padding(
-        padding: const EdgeInsets.only(left: 25,top: 40),
+        padding: const EdgeInsets.only(left: 25,top: 40,right: 25),
         child: Column(
 
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -26,7 +27,7 @@ class IntroPage extends StatelessWidget {
               ),
 
               Padding(
-                padding: const EdgeInsets.only(left: 25,right: 50, top: 50),
+                padding: const EdgeInsets.only(left: 25,right: 25, top: 50),
                 child: Image.asset('lib/images/video-game.png'),
               ),
 
@@ -44,13 +45,16 @@ class IntroPage extends StatelessWidget {
 
               // ignore: prefer_const_constructors
               Text(
-                "The ultimate companion for Nintendo fans on the go!",
+                "The ultimate companion for Nintendo fans!!",
                 style: TextStyle(
                   color: Colors.grey,
                   height: 2,
                 ),
-              )
+              ),
 
+              const SizedBox(height: 25,),
+
+              MyButton(text: "Get Started"),
 
 
             ],
