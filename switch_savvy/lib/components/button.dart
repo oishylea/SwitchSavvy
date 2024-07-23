@@ -18,7 +18,7 @@ Widget build(BuildContext context) {
   child: Container(
     width: double.infinity, // Set the width to fill the parent container
     decoration: BoxDecoration(
-      color: const Color.fromARGB(255, 219, 241, 138),
+      color: const Color.fromARGB(255, 255, 232, 130),
       borderRadius: BorderRadius.circular(30),
     ),
     padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 20),

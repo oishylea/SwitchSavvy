@@ -30,6 +30,7 @@ class _MenuPageState extends State<MenuPage> {
       ),
    
       body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
         Container(
           decoration: BoxDecoration(color: primaryColor, borderRadius: BorderRadius.circular(25)),
@@ -81,7 +82,53 @@ class _MenuPageState extends State<MenuPage> {
           ],
           
           ),
-        )
+        ),
+
+
+        const SizedBox(height: 25),
+        //Search Bar
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 25),
+          child: TextField(
+            decoration: InputDecoration(
+              border: OutlineInputBorder(
+                borderSide: BorderSide(color: const Color.fromARGB(255, 0, 0, 0)),
+                borderRadius: BorderRadius.circular(20)
+              ),
+              focusedBorder: OutlineInputBorder(
+                borderSide: BorderSide(color: const Color.fromARGB(255, 0, 0, 0)),
+                borderRadius: BorderRadius.circular(20)
+              ),
+              enabledBorder: OutlineInputBorder(
+                borderSide: BorderSide(color: const Color.fromARGB(255, 0, 0, 0)),
+                borderRadius: BorderRadius.circular(20)
+              ),
+            ),
+          ),
+        ),
+
+
+        const SizedBox(height: 25),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 25),
+          child: Text(
+            "Game Catalog",
+            style: TextStyle(
+              fontWeight: FontWeight.bold, color: Colors.black,
+              fontSize: 18,
+            )),
+        ),
+
+        const SizedBox(height: 10),
+
+
+        //Menu List
+
+        // Popular Food
+
+
+
+
       ],
       ),
    
