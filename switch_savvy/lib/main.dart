@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:device_preview/device_preview.dart';
-
+import 'pages/menu_page.dart';
 import 'pages/intro_page.dart';
 
 void main() {
@@ -21,6 +21,10 @@ class MyApp extends StatelessWidget {
       locale: DevicePreview.locale(context), // Add this line
       builder: DevicePreview.appBuilder, // Add this line
       home: const IntroPage(),
+      routes: {
+        '/intropage': (context) => const IntroPage(),
+        '/menupage': (context) => const MenuPage(),
+      },
     );
   }
 }

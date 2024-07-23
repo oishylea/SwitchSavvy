@@ -2,14 +2,20 @@ import 'package:flutter/material.dart';
 
 class MyButton extends StatelessWidget{
   final String text;
+  final void Function()? onTap;
+
   const MyButton({
     super.key,
-    required this.text});
+    required this.text,
+    required this.onTap});
 
 
 @override
 Widget build(BuildContext context) {
-  return Container(
+  return GestureDetector(
+    onTap: onTap,
+  
+  child: Container(
     width: double.infinity, // Set the width to fill the parent container
     decoration: BoxDecoration(
       color: const Color.fromARGB(255, 219, 241, 138),
@@ -27,6 +33,7 @@ Widget build(BuildContext context) {
         const Icon(Icons.arrow_forward),
       ],
     ),
+  ),
   );
 }
 
