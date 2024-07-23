@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:to_do_app/components/button.dart';
+import 'package:to_do_app/components/game_tile.dart';
+import 'package:to_do_app/models/game.dart';
 import 'package:to_do_app/theme/colors.dart';
 
 class MenuPage extends StatefulWidget {
@@ -11,6 +13,17 @@ class MenuPage extends StatefulWidget {
 }
 
 class _MenuPageState extends State<MenuPage> {
+
+  List gameCatalog =[
+
+    Game(name: "Fae Farm", price: "230.00", imagePath: "lib/images/Faefarm.jpg", rating: "4.1"),
+    Game(name: "Lemon Cake", price: "230.00", imagePath: "lib/images/LemonCake.jpg", rating: "4.1"),
+    Game(name: "Ooblets", price: "230.00", imagePath: "lib/images/Ooblets.jpg", rating: "4.1"),
+    Game(name: "Spells & Secrets", price: "230.00", imagePath: "lib/images/SpellsAndSecrets.jpg", rating: "4.1"),
+
+
+  ];
+
   @override
   Widget build(BuildContext context) {
 
@@ -107,6 +120,7 @@ class _MenuPageState extends State<MenuPage> {
           ),
         ),
 
+        //Menu List
 
         const SizedBox(height: 25),
         Padding(
@@ -122,10 +136,20 @@ class _MenuPageState extends State<MenuPage> {
         const SizedBox(height: 10),
 
 
-        //Menu List
-
+        Expanded(
+          child: ListView.builder(
+          scrollDirection: Axis.horizontal,
+          itemCount: gameCatalog.length,      
+          itemBuilder: (context,index)=>GameTile(
+                          game: gameCatalog[index],
+                        ),
+                        ),
+        ),
         // Popular Food
 
+        const SizedBox(height: 25),
+
+        Container()
 
 
 
