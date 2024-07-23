@@ -13,12 +13,14 @@ class GameTile extends StatelessWidget{
   Widget build(BuildContext context) {
     
     return Container(
+      height: 250,
       decoration: BoxDecoration(
         color: Colors.grey[100],
         borderRadius: BorderRadius.circular(20)
+  
         ),
       
-      margin: EdgeInsets.only(left: 20),
+      margin: EdgeInsets.only(left: 20,),
       padding: const EdgeInsets.all(20),
   
       child: Column(
@@ -30,10 +32,12 @@ class GameTile extends StatelessWidget{
 
         SizedBox(
           width: 150,
-          child: Row(children: [
+          child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+          children: [
             Image.asset(
           game.imagePath,
-          height: 200,
+          height: 140,
           ),
 
         
@@ -53,7 +57,7 @@ class GameTile extends StatelessWidget{
             children: [
 
               //Price
-              Text('\$'+ game.price),
+              Text('RM '+ game.price),
 
               //Rating
               Row(children: [

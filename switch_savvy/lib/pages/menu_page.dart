@@ -17,9 +17,9 @@ class _MenuPageState extends State<MenuPage> {
   List gameCatalog =[
 
     Game(name: "Fae Farm", price: "230.00", imagePath: "lib/images/Faefarm.jpg", rating: "4.1"),
-    Game(name: "Lemon Cake", price: "230.00", imagePath: "lib/images/LemonCake.jpg", rating: "4.1"),
+    Game(name: "Lemon Cake", price: "250.00", imagePath: "lib/images/LemonCake.jpg", rating: "4.5"),
     Game(name: "Ooblets", price: "230.00", imagePath: "lib/images/Ooblets.jpg", rating: "4.1"),
-    Game(name: "Spells & Secrets", price: "230.00", imagePath: "lib/images/SpellsAndSecrets.jpg", rating: "4.1"),
+    Game(name: "Spells & Secrets", price: "240.00", imagePath: "lib/images/SpellsAndSecrets.jpg", rating: "4.1"),
 
 
   ];
@@ -63,7 +63,7 @@ class _MenuPageState extends State<MenuPage> {
                     color: Colors.black,
                   ),),
 
-                const SizedBox(height: 15,),
+                const SizedBox(height: 10,),
 
 
                 // redeem button
@@ -116,6 +116,7 @@ class _MenuPageState extends State<MenuPage> {
                 borderSide: BorderSide(color: const Color.fromARGB(255, 0, 0, 0)),
                 borderRadius: BorderRadius.circular(20)
               ),
+              hintText: "Search"
             ),
           ),
         ),
@@ -145,11 +146,53 @@ class _MenuPageState extends State<MenuPage> {
                         ),
                         ),
         ),
+
+
+
         // Popular Food
 
         const SizedBox(height: 25),
 
-        Container()
+        Container(
+          decoration: BoxDecoration(
+            color: Colors.grey[100],
+            borderRadius: BorderRadius.circular(20)
+          ),
+          margin: EdgeInsets.only(left: 25,right: 25,bottom: 25),
+          padding: const EdgeInsets.all(20),
+
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Row(
+                children: [
+                  Image.asset(
+                    'lib/images/Ooblets.jpg',
+                    height: 100,),
+                  
+                    const SizedBox(width: 20,),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                      Text("Ooblets",style: GoogleFonts.dmSerifDisplay(
+                        color: Colors.black,
+                        fontSize: 18),),
+                  
+                        const SizedBox(height: 10,),
+                      
+                      Text('RM 230.00',style: TextStyle(color: Colors.black),)
+                    ],),
+                ],
+              ),
+              
+              
+              //heart
+              Icon(Icons.favorite_outline,color: Colors.grey,size: 28,),
+
+
+            ],
+          ),
+        )
 
 
 
