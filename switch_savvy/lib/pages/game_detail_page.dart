@@ -21,14 +21,14 @@ class GameDetailPage extends StatelessWidget {
               game.imagePath,
               height: 200,
             ),
-            SizedBox(height: 16),
+            const SizedBox(height: 16),
             Text(
               game.name,
-              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+              style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
             ),
-            SizedBox(height: 8),
-            Text('Price: RM ' + game.price),
-            SizedBox(height: 8),
+            const SizedBox(height: 8),
+            Text('Price: RM ${game.price}'),
+            const SizedBox(height: 8),
             Row(
               children: [
                 Icon(
@@ -37,17 +37,17 @@ class GameDetailPage extends StatelessWidget {
                 ),
                 Text(
                   game.rating,
-                  style: TextStyle(color: Colors.grey),
+                  style: const TextStyle(color: Colors.grey),
                 ),
               ],
             ),
-            SizedBox(height: 16),
-            Text(
+            const SizedBox(height: 16),
+            const Text(
               'Description:',
               style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
             ),
-            SizedBox(height: 8),
-            Text("desc of the game"), // Assuming the Game model has a description field
+            const SizedBox(height: 8),
+            const Text("desc of the game"), // Assuming the Game model has a description field
           ],
         ),
       ),

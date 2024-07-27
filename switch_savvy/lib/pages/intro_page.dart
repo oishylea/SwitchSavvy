@@ -35,7 +35,7 @@ class IntroPage extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 10),
-            Text(
+            const Text(
               "The ultimate companion for Nintendo fans!!",
               style: TextStyle(
                 fontSize: 15,

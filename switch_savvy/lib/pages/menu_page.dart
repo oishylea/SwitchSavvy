@@ -48,7 +48,7 @@ class _MenuPageState extends State<MenuPage> {
                 borderRadius: BorderRadius.circular(25),
               ),
               margin: const EdgeInsets.symmetric(horizontal: 20),
-              padding: EdgeInsets.all(25),
+              padding: const EdgeInsets.all(25),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -64,13 +64,13 @@ class _MenuPageState extends State<MenuPage> {
                       const SizedBox(height: 10),
                       Container(
                         width: 120,
-                        padding: EdgeInsets.all(16),
-                        margin: EdgeInsets.symmetric(vertical: 10),
+                        padding: const EdgeInsets.all(16),
+                        margin: const EdgeInsets.symmetric(vertical: 10),
                         decoration: BoxDecoration(
                           color: Colors.yellow,
                           borderRadius: BorderRadius.circular(25),
                         ),
-                        child: Center(
+                        child: const Center(
                           child: Text('Redeem'),
                         ),
                       )
@@ -86,15 +86,15 @@ class _MenuPageState extends State<MenuPage> {
               child: TextField(
                 decoration: InputDecoration(
                   border: OutlineInputBorder(
-                    borderSide: BorderSide(color: const Color.fromARGB(255, 0, 0, 0)),
+                    borderSide: const BorderSide(color: Color.fromARGB(255, 0, 0, 0)),
                     borderRadius: BorderRadius.circular(20),
                   ),
                   focusedBorder: OutlineInputBorder(
-                    borderSide: BorderSide(color: const Color.fromARGB(255, 0, 0, 0)),
+                    borderSide: const BorderSide(color: Color.fromARGB(255, 0, 0, 0)),
                     borderRadius: BorderRadius.circular(20),
                   ),
                   enabledBorder: OutlineInputBorder(
-                    borderSide: BorderSide(color: const Color.fromARGB(255, 0, 0, 0)),
+                    borderSide: const BorderSide(color: Color.fromARGB(255, 0, 0, 0)),
                     borderRadius: BorderRadius.circular(20),
                   ),
                   hintText: "Search",
@@ -102,8 +102,8 @@ class _MenuPageState extends State<MenuPage> {
               ),
             ),
             const SizedBox(height: 25),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 25),
+            const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 25),
               child: Text(
                 "Game Catalog",
                 style: TextStyle(
@@ -129,8 +129,8 @@ class _MenuPageState extends State<MenuPage> {
 
             const SizedBox(height: 25),
 
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 25),
+            const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 25),
               child: Text(
                 "Top 3 Games",
                 style: TextStyle(
@@ -147,7 +147,7 @@ class _MenuPageState extends State<MenuPage> {
                 color: Colors.grey[100],
                 borderRadius: BorderRadius.circular(20),
               ),
-              margin: EdgeInsets.only(left: 25, right: 25, bottom: 10),
+              margin: const EdgeInsets.only(left: 25, right: 25, bottom: 10),
               padding: const EdgeInsets.all(20),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -175,7 +175,7 @@ class _MenuPageState extends State<MenuPage> {
                             ),
                           ),
                           const SizedBox(height: 10),
-                          Text(
+                          const Text(
                             'RM 250.00',
                             style: TextStyle(color: Colors.black),
                           ),
@@ -183,7 +183,7 @@ class _MenuPageState extends State<MenuPage> {
                       ),
                     ],
                   ),
-                  Icon(
+                  const Icon(
                     Icons.favorite_outline,
                     color: Colors.grey,
                     size: 28,
@@ -198,7 +198,7 @@ class _MenuPageState extends State<MenuPage> {
                 color: Colors.grey[100],
                 borderRadius: BorderRadius.circular(20),
               ),
-              margin: EdgeInsets.only(left: 25, right: 25, bottom: 10),
+              margin: const EdgeInsets.only(left: 25, right: 25, bottom: 10),
               padding: const EdgeInsets.all(20),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -226,7 +226,7 @@ class _MenuPageState extends State<MenuPage> {
                             ),
                           ),
                           const SizedBox(height: 10),
-                          Text(
+                          const Text(
                             'RM 250.00',
                             style: TextStyle(color: Colors.black),
                           ),
@@ -234,7 +234,7 @@ class _MenuPageState extends State<MenuPage> {
                       ),
                     ],
                   ),
-                  Icon(
+                  const Icon(
                     Icons.favorite_outline,
                     color: Colors.grey,
                     size: 28,
@@ -250,7 +250,7 @@ class _MenuPageState extends State<MenuPage> {
                 color: Colors.grey[100],
                 borderRadius: BorderRadius.circular(20),
               ),
-              margin: EdgeInsets.only(left: 25, right: 25, bottom: 10),
+              margin: const EdgeInsets.only(left: 25, right: 25, bottom: 10),
               padding: const EdgeInsets.all(20),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -278,7 +278,7 @@ class _MenuPageState extends State<MenuPage> {
                             ),
                           ),
                           const SizedBox(height: 10),
-                          Text(
+                          const Text(
                             'RM 230.00',
                             style: TextStyle(color: Colors.black),
                           ),
@@ -286,7 +286,7 @@ class _MenuPageState extends State<MenuPage> {
                       ),
                     ],
                   ),
-                  Icon(
+                  const Icon(
                     Icons.favorite_outline,
                     color: Colors.grey,
                     size: 28,

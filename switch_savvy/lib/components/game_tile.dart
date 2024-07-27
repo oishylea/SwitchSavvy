@@ -28,7 +28,7 @@ class GameTile extends StatelessWidget {
           color: Colors.grey[100],
           borderRadius: BorderRadius.circular(20),
         ),
-        margin: EdgeInsets.only(left: 20),
+        margin: const EdgeInsets.only(left: 20),
         padding: const EdgeInsets.all(20),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -54,7 +54,7 @@ class GameTile extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text('RM ' + game.price),
+                  Text('RM ${game.price}'),
                   Row(
                     children: [
                       Icon(
@@ -63,7 +63,7 @@ class GameTile extends StatelessWidget {
                       ),
                       Text(
                         game.rating,
-                        style: TextStyle(color: Colors.grey),
+                        style: const TextStyle(color: Colors.grey),
                       ),
                     ],
                   ),
