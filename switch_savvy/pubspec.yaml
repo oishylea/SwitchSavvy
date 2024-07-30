@@ -69,6 +69,8 @@ flutter:
   assets:
     - lib/images/
     - lib/images/Splatoon2.jpg
+    - lib/images/horizontalLemonCake.jpg
+    - lib/images/horizontalOoblets.jpg
 
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg

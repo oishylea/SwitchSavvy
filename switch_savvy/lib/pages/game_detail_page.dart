@@ -18,8 +18,9 @@ class GameDetailPage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Image.asset(
-              game.imagePath,
+              game.horizontalPoster,
               height: 200,
+              alignment: Alignment.center,
             ),
             const SizedBox(height: 16),
             Text(

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:to_do_app/components/button.dart';
 import 'package:to_do_app/components/game_tile.dart';
 import 'package:to_do_app/models/game.dart';
 import 'package:to_do_app/theme/colors.dart';
@@ -14,12 +13,12 @@ class MenuPage extends StatefulWidget {
 
 class _MenuPageState extends State<MenuPage> {
   List<Game> gameCatalog = [
-    Game(name: "Fae Farm", price: "230.00", imagePath: "lib/images/Faefarm.jpg", rating: "4.1"),
-    Game(name: "Lemon Cake", price: "250.00", imagePath: "lib/images/LemonCake.jpg", rating: "4.5"),
-    Game(name: "Ooblets", price: "230.00", imagePath: "lib/images/Ooblets.jpg", rating: "4.1"),
-    Game(name: "Splatoon 2", price: "250.00", imagePath: "lib/images/Splatoon2.jpg", rating: "4.8"),
-    Game(name: "Animal Crossing", price: "250.00", imagePath: "lib/images/AnimalCrossing.jpg", rating: "4.9"),
-    Game(name: "Spells & Secrets", price: "240.00", imagePath: "lib/images/SpellsAndSecrets.jpg", rating: "4.1")
+    Game(name: "Fae Farm", price: "230.00", imagePath: "lib/images/Faefarm.jpg", horizontalPoster: "lib/images/horizontalFaefarm.jpg",rating: "4.1"),
+    Game(name: "Lemon Cake", price: "250.00", imagePath: "lib/images/LemonCake.jpg", horizontalPoster: "lib/images/horizontalLemonCake.jpg",rating: "4.5"),
+    Game(name: "Ooblets", price: "230.00", imagePath: "lib/images/Ooblets.jpg", horizontalPoster: "lib/images/horizontalOoblets.jpg",rating: "4.1"),
+    Game(name: "Splatoon 2", price: "250.00", imagePath: "lib/images/Splatoon2.jpg", horizontalPoster: "lib/images/horizontalSplatoon2.jpg",rating: "4.8"),
+    Game(name: "Animal Crossing", price: "250.00", imagePath: "lib/images/AnimalCrossing.jpg", horizontalPoster: "lib/images/horizontalAnimalCrossing.jpg",rating: "4.9"),
+    Game(name: "Spells & Secrets", price: "240.00", imagePath: "lib/images/SpellsAndSecrets.jpg", horizontalPoster: "lib/images/horizontalSpellsAndSecrets.jpg",rating: "4.1")
   ];
 
   @override
