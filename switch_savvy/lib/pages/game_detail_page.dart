@@ -79,11 +79,36 @@ class _GameDetailPageState extends State<GameDetailPage> {
                         height: 2,
                       ),
                     ),
+
+                    const SizedBox(height: 25),
+
+                     Image.asset(
+                      widget.game.preview1,
+                      height: 200,
+                      alignment: Alignment.center,
+                    ),
+                    const SizedBox(height: 16),
+                                        Image.asset(
+                      widget.game.preview2,
+                      height: 200,
+                      alignment: Alignment.center,
+                    ),
+                                        const SizedBox(height: 16),
+                                        Image.asset(
+                      widget.game.preview3,
+                      height: 200,
+                      alignment: Alignment.center,
+                    ),
                   ],
                 ),
               ),
             ),
           ),
+
+
+
+
+
           Container(
             color: primaryColor,
             padding: const EdgeInsets.all(25),
