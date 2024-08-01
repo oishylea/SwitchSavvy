@@ -23,10 +23,10 @@ class IntroPage extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(left: 25, right: 25, top: 50),
+              padding: const EdgeInsets.only(left: 25, right: 25, top: 25),
               child: Image.asset('lib/images/video-game.png'),
             ),
-            const SizedBox(height: 25),
+            const SizedBox(height: 18),
             Text(
               "YOUR NINTENDO SWITCH GAMES CATALOG",
               style: GoogleFonts.dmSerifDisplay(
@@ -34,7 +34,6 @@ class IntroPage extends StatelessWidget {
                 color: Colors.black,
               ),
             ),
-            const SizedBox(height: 10),
             const Text(
               "The ultimate companion for Nintendo fans!!",
               style: TextStyle(
@@ -43,7 +42,6 @@ class IntroPage extends StatelessWidget {
                 height: 2,
               ),
             ),
-            const SizedBox(height: 25),
             MyButton(
               text: "Get Started",
               onTap: () {

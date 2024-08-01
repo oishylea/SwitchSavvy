@@ -30,7 +30,7 @@ class _MenuPageState extends State<MenuPage> {
      preview1: "lib/images/Preview1AC.jpg",preview2: "lib/images/Preview2AC.jpg",preview3: "lib/images/Preview3AC.jpg",rating: "4.9"),
     Game(name: "Spells & Secrets", price: "240.00", imagePath: "lib/images/SpellsAndSecrets.jpg", horizontalPoster: "lib/images/horizontalSpellsAndSecrets.jpg",
     desc: "Free the wizard Academy of Greifenstein from magical creatures by using your spells in creative ways. Play in local co-op with your friends or family, customize your own student wizard, solve mysteries and find powerful artifacts in this modern magical world.",
-     preview1: "lib/images/Preview1SS.jpg",preview2: "lib/images/Preview2SS.jpg",preview3: "lib/images/Preview2SS.jpg",rating: "4.1")
+     preview1: "lib/images/Preview1SS.jpg",preview2: "lib/images/Preview2SS.jpg",preview3: "lib/images/Preview3SS.jpg",rating: "4.1")
   ];
 
   @override
