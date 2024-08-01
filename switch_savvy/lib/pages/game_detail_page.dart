@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart'; // Import provider
 import 'package:to_do_app/theme/colors.dart';
+import '../models/shop.dart'; // Import the Shop class
 import '../models/game.dart';
+
 class GameDetailPage extends StatefulWidget {
   final Game game;
 
@@ -13,7 +16,7 @@ class GameDetailPage extends StatefulWidget {
 class _GameDetailPageState extends State<GameDetailPage> {
   int quantityCount = 0;
 
-  void decrementQuality() {
+  void decrementQuantity() {
     setState(() {
       if (quantityCount > 0) {
         quantityCount--;
@@ -21,13 +24,15 @@ class _GameDetailPageState extends State<GameDetailPage> {
     });
   }
 
-  void incrementQuality() {
+  void incrementQuantity() {
     setState(() {
       quantityCount++;
     });
   }
 
-  void addToCart() {}
+  void addToCart() {
+    Provider.of<Shop>(context, listen: false).addToCart(widget.game, quantityCount);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -79,22 +84,20 @@ class _GameDetailPageState extends State<GameDetailPage> {
                         height: 2,
                       ),
                     ),
-
                     const SizedBox(height: 25),
-
-                     Image.asset(
+                    Image.asset(
                       widget.game.preview1,
                       height: 200,
                       alignment: Alignment.center,
                     ),
                     const SizedBox(height: 16),
-                                        Image.asset(
+                    Image.asset(
                       widget.game.preview2,
                       height: 200,
                       alignment: Alignment.center,
                     ),
-                                        const SizedBox(height: 16),
-                                        Image.asset(
+                    const SizedBox(height: 16),
+                    Image.asset(
                       widget.game.preview3,
                       height: 200,
                       alignment: Alignment.center,
@@ -104,11 +107,6 @@ class _GameDetailPageState extends State<GameDetailPage> {
               ),
             ),
           ),
-
-
-
-
-
           Container(
             color: primaryColor,
             padding: const EdgeInsets.all(25),
@@ -136,15 +134,17 @@ class _GameDetailPageState extends State<GameDetailPage> {
                           child: IconButton(
                             icon: const Icon(Icons.remove),
                             color: Colors.black,
-                            onPressed: decrementQuality,
+                            onPressed: decrementQuantity,
                           ),
                         ),
                         const SizedBox(width: 8),
                         SizedBox(
-                            width: 40,
-                            child: Center(
-                                child: Text('$quantityCount',
-                                    style: const TextStyle(fontWeight: FontWeight.bold)))),
+                          width: 40,
+                          child: Center(
+                            child: Text('$quantityCount',
+                                style: const TextStyle(fontWeight: FontWeight.bold)),
+                          ),
+                        ),
                         const SizedBox(width: 8),
                         Container(
                           decoration: const BoxDecoration(
@@ -154,7 +154,7 @@ class _GameDetailPageState extends State<GameDetailPage> {
                           child: IconButton(
                             icon: const Icon(Icons.add),
                             color: Colors.black,
-                            onPressed: incrementQuality,
+                            onPressed: incrementQuantity,
                           ),
                         ),
                       ],
@@ -165,7 +165,10 @@ class _GameDetailPageState extends State<GameDetailPage> {
                 Align(
                   alignment: Alignment.centerRight,
                   child: ElevatedButton(
-                    onPressed: addToCart,
+                    onPressed: () {
+                      addToCart();
+                      Navigator.pushNamed(context, '/cart');
+                    },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.white,
                       shape: RoundedRectangleBorder(
@@ -175,8 +178,6 @@ class _GameDetailPageState extends State<GameDetailPage> {
                     child: const Text('Add to Cart', style: TextStyle(color: Colors.black)),
                   ),
                 ),
-
-
               ],
             ),
           ),
