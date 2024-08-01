@@ -42,71 +42,80 @@ class _GameDetailPageState extends State<GameDetailPage> {
       ),
       body: Column(
         children: [
-          Expanded(
-            child: SingleChildScrollView(
-              child: Padding(
-                padding: const EdgeInsets.all(16.0),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Image.asset(
-                      widget.game.horizontalPoster,
-                      height: 200,
-                      alignment: Alignment.center,
-                    ),
-                    const SizedBox(height: 16),
-                    Text(
-                      widget.game.name,
-                      style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-                    ),
-                    const SizedBox(height: 8),
-                    Row(
-                      children: [
-                        Icon(
-                          Icons.star,
-                          color: Colors.yellow[800],
-                        ),
-                        Text(
-                          widget.game.rating,
-                          style: const TextStyle(color: Colors.grey),
-                        ),
-                      ],
-                    ),
-                    const SizedBox(height: 16),
-                    const Text(
-                      'Description:',
-                      style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-                    ),
-                    const SizedBox(height: 8),
-                    Text(
-                      widget.game.desc,
-                      style: const TextStyle(
-                        height: 2,
-                      ),
-                    ),
-                    const SizedBox(height: 25),
-                    Image.asset(
-                      widget.game.preview1,
-                      height: 200,
-                      alignment: Alignment.center,
-                    ),
-                    const SizedBox(height: 16),
-                    Image.asset(
-                      widget.game.preview2,
-                      height: 200,
-                      alignment: Alignment.center,
-                    ),
-                    const SizedBox(height: 16),
-                    Image.asset(
-                      widget.game.preview3,
-                      height: 200,
-                      alignment: Alignment.center,
-                    ),
-                  ],
-                ),
-              ),
+         Expanded(
+  child: SingleChildScrollView(
+    child: Padding(
+      padding: const EdgeInsets.all(16.0),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Center(
+            child: Image.asset(
+              widget.game.horizontalPoster,
+              height: 200,
+              alignment: Alignment.center,
             ),
           ),
+          const SizedBox(height: 16),
+          Text(
+            widget.game.name,
+            style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+          ),
+          const SizedBox(height: 8),
+          Row(
+            children: [
+              Icon(
+                Icons.star,
+                color: Colors.yellow[800],
+              ),
+              Text(
+                widget.game.rating,
+                style: const TextStyle(color: Colors.grey),
+              ),
+            ],
+          ),
+          const SizedBox(height: 16),
+          const Text(
+            'Description:',
+            style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+          ),
+          const SizedBox(height: 8),
+          Text(
+            widget.game.desc,
+            style: const TextStyle(
+              height: 2,
+            ),
+          ),
+          const SizedBox(height: 25),
+          Center(
+            child: Image.asset(
+              widget.game.preview1,
+              height: 200,
+              alignment: Alignment.center,
+            ),
+          ),
+          const SizedBox(height: 16),
+          Center(
+            child: Image.asset(
+              widget.game.preview2,
+              height: 200,
+              alignment: Alignment.center,
+            ),
+          ),
+          const SizedBox(height: 16),
+          Center(
+            child: Image.asset(
+              widget.game.preview3,
+              height: 200,
+              alignment: Alignment.center,
+            ),
+          ),
+        ],
+      ),
+    ),
+  ),
+),
+
           Container(
             color: primaryColor,
             padding: const EdgeInsets.all(25),
@@ -161,6 +170,10 @@ class _GameDetailPageState extends State<GameDetailPage> {
                     ),
                   ],
                 ),
+
+
+
+
                 const SizedBox(height: 16),
                 Align(
                   alignment: Alignment.centerRight,
