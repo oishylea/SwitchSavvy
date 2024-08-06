@@ -4,6 +4,8 @@ import 'package:to_do_app/components/game_tile.dart';
 import 'package:to_do_app/models/game.dart';
 import 'package:to_do_app/pages/animal_crossing.dart';
 import 'package:to_do_app/pages/game_detail_page.dart';
+import 'package:to_do_app/pages/ooblets.dart';
+import 'package:to_do_app/pages/splatoon.dart';
 import 'package:to_do_app/theme/colors.dart';
 
 class MenuPage extends StatefulWidget {
@@ -230,107 +232,130 @@ GestureDetector(
 ),
             //Ranking 2
  const SizedBox(height: 5),
-            Container(
-              decoration: BoxDecoration(
-                color: Colors.grey[100],
-                borderRadius: BorderRadius.circular(20),
-              ),
-              margin: const EdgeInsets.only(left: 25, right: 25, bottom: 10),
-              padding: const EdgeInsets.all(20),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Row(
-                    children: [
-                      Text("2.   ",
-                            style: GoogleFonts.dmSerifDisplay(
-                              color: Colors.black,
-                              fontSize: 18,
-                              fontWeight: FontWeight.bold),),
-                      Image.asset(
-                        'lib/images/Splatoon2.jpg',
-                        height: 100,
-                      ),
-                      const SizedBox(width: 20),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            "Splatoon 2",
-                            style: GoogleFonts.dmSerifDisplay(
-                              color: Colors.black,
-                              fontSize: 18,
-                            ),
-                          ),
-                          const SizedBox(height: 10),
-                          const Text(
-                            'RM 250.00',
-                            style: TextStyle(color: Colors.black),
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
-                  const Icon(
-                    Icons.favorite_outline,
-                    color: Colors.grey,
-                    size: 28,
-                  ),
-                ],
-              ),
+// Splatoon 2
+GestureDetector(
+  onTap: () {
+    // Navigate to the detailed page for Splatoon 2
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => SplatoonPage(),
+      ),
+    );
+  },
+  child: Container(
+    decoration: BoxDecoration(
+      color: Colors.grey[100],
+      borderRadius: BorderRadius.circular(20),
+    ),
+    margin: const EdgeInsets.only(left: 25, right: 25, bottom: 10),
+    padding: const EdgeInsets.all(20),
+    child: Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        Row(
+          children: [
+            Text("2.   ",
+                  style: GoogleFonts.dmSerifDisplay(
+                    color: Colors.black,
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold),),
+            Image.asset(
+              'lib/images/Splatoon2.jpg',
+              height: 100,
             ),
+            const SizedBox(width: 20),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  "Splatoon 2",
+                  style: GoogleFonts.dmSerifDisplay(
+                    color: Colors.black,
+                    fontSize: 18,
+                  ),
+                ),
+                const SizedBox(height: 10),
+                const Text(
+                  'RM 250.00',
+                  style: TextStyle(color: Colors.black),
+                ),
+              ],
+            ),
+          ],
+        ),
+        const Icon(
+          Icons.favorite_outline,
+          color: Colors.grey,
+          size: 28,
+        ),
+      ],
+    ),
+  ),
+),
+ const SizedBox(height: 5),
 
-            //RANKING 3
-            const SizedBox(height: 5),
-            Container(
-              decoration: BoxDecoration(
-                color: Colors.grey[100],
-                borderRadius: BorderRadius.circular(20),
-              ),
-              margin: const EdgeInsets.only(left: 25, right: 25, bottom: 10),
-              padding: const EdgeInsets.all(20),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Row(
-                    children: [
-                      Text("3.   ",
-                            style: GoogleFonts.dmSerifDisplay(
-                              color: Colors.black,
-                              fontSize: 18,
-                              fontWeight: FontWeight.bold),),
-                      Image.asset(
-                        'lib/images/Ooblets.jpg',
-                        height: 100,
-                      ),
-                      const SizedBox(width: 20),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            "Ooblets",
-                            style: GoogleFonts.dmSerifDisplay(
-                              color: Colors.black,
-                              fontSize: 18,
-                            ),
-                          ),
-                          const SizedBox(height: 10),
-                          const Text(
-                            'RM 230.00',
-                            style: TextStyle(color: Colors.black),
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
-                  const Icon(
-                    Icons.favorite_outline,
-                    color: Colors.grey,
-                    size: 28,
-                  ),
-                ],
-              ),
+// Ooblets
+GestureDetector(
+  onTap: () {
+    // Navigate to the detailed page for Ooblets
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => OobletsPage(),
+      ),
+    );
+  },
+  child: Container(
+    decoration: BoxDecoration(
+      color: Colors.grey[100],
+      borderRadius: BorderRadius.circular(20),
+    ),
+    margin: const EdgeInsets.only(left: 25, right: 25, bottom: 10),
+    padding: const EdgeInsets.all(20),
+    child: Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        Row(
+          children: [
+            Text("3.   ",
+                  style: GoogleFonts.dmSerifDisplay(
+                    color: Colors.black,
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold),),
+            Image.asset(
+              'lib/images/Ooblets.jpg',
+              height: 100,
             ),
+            const SizedBox(width: 20),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  "Ooblets",
+                  style: GoogleFonts.dmSerifDisplay(
+                    color: Colors.black,
+                    fontSize: 18,
+                  ),
+                ),
+                const SizedBox(height: 10),
+                const Text(
+                  'RM 230.00',
+                  style: TextStyle(color: Colors.black),
+                ),
+              ],
+            ),
+          ],
+        ),
+        const Icon(
+          Icons.favorite_outline,
+          color: Colors.grey,
+          size: 28,
+        ),
+      ],
+    ),
+  ),
+),
           ],
         ),
       ),
