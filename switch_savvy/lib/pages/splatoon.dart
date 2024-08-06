@@ -7,15 +7,15 @@ import 'package:to_do_app/theme/colors.dart';
 class SplatoonPage extends StatefulWidget {
   Game get game => Game(
         name: "Splatoon 2",
-        price: "199.99",
-        imagePath: "images/AnimalCrossing.jpg",
-        horizontalPoster: "images/horizontalAnimalCrossing.jpg",
+        price: "250.00",
+        imagePath: "images/Splatoon2.jpg",
+        horizontalPoster: "images/horizontalSplatoon2.jpg",
         desc:
-            "Your island getaway has a wealth of natural resources that can be used to craft everything from tools to creature comforts. You can hunt down insects at the crack of dawn, decorate your paradise throughout the day, or enjoy sunset on the beach while fishing in the ocean. The time of day and season match real life, so each day on your island is a chance to check in and find new surprises all year round.",
-        preview1: "images/Preview1AC.jpg",
-        preview2: "images/Preview2AC.jpg",
-        preview3: "images/Preview3AC.jpg",
-        rating: "4.9",
+            "A colorful and competitive third-person shooter game for the Nintendo Switch. Players take on the role of Inklings, characters who can transform between human and squid form. The objective is to cover as much of the map as possible with your team's colored ink, while also trying to splatter opponents with your various ink-based weapons.",
+        preview1: "images/Preview1Spla2.jpg",
+        preview2: "images/Preview2Spla2.jpg",
+        preview3: "images/Preview3Spla2.jpg",
+        rating: "4.8",
       );
 
   @override
