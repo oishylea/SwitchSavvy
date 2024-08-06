@@ -47,7 +47,7 @@ class _SplatoonPageState extends State<SplatoonPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Animal Crossing"),
+        title: Text("Splatoon 2"),
       ),
       body: Column(
         children: [

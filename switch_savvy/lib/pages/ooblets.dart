@@ -7,15 +7,15 @@ import 'package:to_do_app/theme/colors.dart';
 class OobletsPage extends StatefulWidget {
   Game get game => Game(
         name: "Ooblets",
-        price: "199.99",
-        imagePath: "images/AnimalCrossing.jpg",
-        horizontalPoster: "images/horizontalAnimalCrossing.jpg",
+        price: "230.00",
+        imagePath: "images/Ooblets.jpg",
+        horizontalPoster: "images/horizontalOoblets.jpg",
         desc:
-            "Your island getaway has a wealth of natural resources that can be used to craft everything from tools to creature comforts. You can hunt down insects at the crack of dawn, decorate your paradise throughout the day, or enjoy sunset on the beach while fishing in the ocean. The time of day and season match real life, so each day on your island is a chance to check in and find new surprises all year round.",
-        preview1: "images/Preview1AC.jpg",
-        preview2: "images/Preview2AC.jpg",
-        preview3: "images/Preview3AC.jpg",
-        rating: "4.9",
+            "Ooblets is a whimsical farming and creature collecting game for the Nintendo Switch. Players take on the role of a newcomer to the town of Badgetown, where they can grow crops, befriend and collect cute creatures called Ooblets, and participate in dance battles. The gameplay involves a mix of farming, exploration, and social interactions with the quirky residents of Badgetown. The game features a charming art style and a lighthearted, relaxing gameplay experience.",
+        preview1: "images/Preview1Oob.jpg",
+        preview2: "images/Preview2Oob.jpg",
+        preview3: "images/Preview3Oob.jpg",
+        rating: "4.1",
       );
 
   @override
@@ -47,7 +47,7 @@ class _OobletsPageState extends State<OobletsPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Animal Crossing"),
+        title: Text("Ooblets"),
       ),
       body: Column(
         children: [
