@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:to_do_app/components/game_tile.dart';
 import 'package:to_do_app/models/game.dart';
+import 'package:to_do_app/pages/animal_crossing.dart';
+import 'package:to_do_app/pages/game_detail_page.dart';
 import 'package:to_do_app/theme/colors.dart';
 
 class MenuPage extends StatefulWidget {
@@ -166,55 +168,66 @@ class _MenuPageState extends State<MenuPage> {
             ),
             const SizedBox(height: 10),
 
-            Container(
-              decoration: BoxDecoration(
-                color: Colors.grey[100],
-                borderRadius: BorderRadius.circular(20),
-              ),
-              margin: const EdgeInsets.only(left: 25, right: 25, bottom: 10),
-              padding: const EdgeInsets.all(20),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Row(
-                    children: [
-                      Text("1.   ",
-                            style: GoogleFonts.dmSerifDisplay(
-                              color: Colors.black,
-                              fontSize: 18,
-                              fontWeight: FontWeight.bold),),
-                      Image.asset(
-                        'lib/images/AnimalCrossing.jpg',
-                        height: 100,
-                      ),
-                      const SizedBox(width: 20),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            "Animal Crossing",
-                            style: GoogleFonts.dmSerifDisplay(
-                              color: Colors.black,
-                              fontSize: 18,
-                            ),
-                          ),
-                          const SizedBox(height: 10),
-                          const Text(
-                            'RM 250.00',
-                            style: TextStyle(color: Colors.black),
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
-                  const Icon(
-                    Icons.favorite_outline,
-                    color: Colors.grey,
-                    size: 28,
-                  ),
-                ],
-              ),
+GestureDetector(
+  onTap: () {
+    // Navigate to the detailed page for Animal Crossing
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => AnimalCrossingPage(),
+      ),
+    );
+  },
+  child: Container(
+    decoration: BoxDecoration(
+      color: Colors.grey[100],
+      borderRadius: BorderRadius.circular(20),
+    ),
+    margin: const EdgeInsets.only(left: 25, right: 25, bottom: 10),
+    padding: const EdgeInsets.all(20),
+    child: Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        Row(
+          children: [
+            Text("1.   ",
+                  style: GoogleFonts.dmSerifDisplay(
+                    color: Colors.black,
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold),),
+            Image.asset(
+              'lib/images/AnimalCrossing.jpg',
+              height: 100,
             ),
+            const SizedBox(width: 20),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  "Animal Crossing",
+                  style: GoogleFonts.dmSerifDisplay(
+                    color: Colors.black,
+                    fontSize: 18,
+                  ),
+                ),
+                const SizedBox(height: 10),
+                const Text(
+                  'RM 250.00',
+                  style: TextStyle(color: Colors.black),
+                ),
+              ],
+            ),
+          ],
+        ),
+        const Icon(
+          Icons.favorite_outline,
+          color: Colors.grey,
+          size: 28,
+        ),
+      ],
+    ),
+  ),
+),
             //Ranking 2
  const SizedBox(height: 5),
             Container(
