@@ -5,18 +5,10 @@ import 'package:to_do_app/models/shop.dart';
 import 'package:to_do_app/theme/colors.dart';
 
 class AnimalCrossingPage extends StatefulWidget {
-  Game get game => Game(
-        name: "Animal Crossing",
-        price: "250.00",
-        imagePath: "images/AnimalCrossing.jpg",
-        horizontalPoster: "images/horizontalAnimalCrossing.jpg",
-        desc:
-            "Your island getaway has a wealth of natural resources that can be used to craft everything from tools to creature comforts. You can hunt down insects at the crack of dawn, decorate your paradise throughout the day, or enjoy sunset on the beach while fishing in the ocean. The time of day and season match real life, so each day on your island is a chance to check in and find new surprises all year round.",
-        preview1: "images/Preview1AC.jpg",
-        preview2: "images/Preview2AC.jpg",
-        preview3: "images/Preview3AC.jpg",
-        rating: "4.9",
-      );
+  Game get game =>  Game(name: "Animal Crossing", price: "250.00", imagePath: "lib/images/AnimalCrossing.jpg", horizontalPoster: "lib/images/horizontalAnimalCrossing.jpg",
+    desc: "Your island getaway has a wealth of natural resources that can be used to craft everything from tools to creature comforts. You can hunt down insects at the crack of dawn, decorate your paradise throughout the day, or enjoy sunset on the beach while fishing in the ocean. The time of day and season match real life, so each day on your island is a chance to check in and find new surprises all year round.",
+     preview1: "lib/images/Preview1AC.jpg",preview2: "lib/images/Preview2AC.jpg",preview3: "lib/images/Preview3AC.jpg",rating: "4.9");
+    
 
   @override
   _AnimalCrossingPageState createState() => _AnimalCrossingPageState();

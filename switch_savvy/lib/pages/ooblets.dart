@@ -5,18 +5,10 @@ import 'package:to_do_app/models/shop.dart';
 import 'package:to_do_app/theme/colors.dart';
 
 class OobletsPage extends StatefulWidget {
-  Game get game => Game(
-        name: "Ooblets",
-        price: "230.00",
-        imagePath: "images/Ooblets.jpg",
-        horizontalPoster: "images/horizontalOoblets.jpg",
-        desc:
-            "Ooblets is a whimsical farming and creature collecting game for the Nintendo Switch. Players take on the role of a newcomer to the town of Badgetown, where they can grow crops, befriend and collect cute creatures called Ooblets, and participate in dance battles. The gameplay involves a mix of farming, exploration, and social interactions with the quirky residents of Badgetown. The game features a charming art style and a lighthearted, relaxing gameplay experience.",
-        preview1: "images/Preview1Oob.jpg",
-        preview2: "images/Preview2Oob.jpg",
-        preview3: "images/Preview3Oob.jpg",
-        rating: "4.1",
-      );
+  Game get game => Game(name: "Ooblets", price: "230.00", imagePath: "lib/images/Ooblets.jpg", horizontalPoster: "lib/images/horizontalOoblets.jpg",
+    desc: "Ooblets is a whimsical farming and creature collecting game for the Nintendo Switch. Players take on the role of a newcomer to the town of Badgetown, where they can grow crops, befriend and collect cute creatures called Ooblets, and participate in dance battles. The gameplay involves a mix of farming, exploration, and social interactions with the quirky residents of Badgetown. The game features a charming art style and a lighthearted, relaxing gameplay experience.",
+     preview1: "lib/images/Preview1Oob.jpg",preview2: "lib/images/Preview2Oob.jpg",preview3: "lib/images/Preview3Oob.jpg",rating: "4.1");
+    
 
   @override
   _OobletsPageState createState() => _OobletsPageState();

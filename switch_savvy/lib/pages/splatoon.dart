@@ -5,18 +5,10 @@ import 'package:to_do_app/models/shop.dart';
 import 'package:to_do_app/theme/colors.dart';
 
 class SplatoonPage extends StatefulWidget {
-  Game get game => Game(
-        name: "Splatoon 2",
-        price: "250.00",
-        imagePath: "images/Splatoon2.jpg",
-        horizontalPoster: "images/horizontalSplatoon2.jpg",
-        desc:
-            "A colorful and competitive third-person shooter game for the Nintendo Switch. Players take on the role of Inklings, characters who can transform between human and squid form. The objective is to cover as much of the map as possible with your team's colored ink, while also trying to splatter opponents with your various ink-based weapons.",
-        preview1: "images/Preview1Spla2.jpg",
-        preview2: "images/Preview2Spla2.jpg",
-        preview3: "images/Preview3Spla2.jpg",
-        rating: "4.8",
-      );
+  Game get game =>  Game(name: "Splatoon 2", price: "250.00", imagePath: "lib/images/Splatoon2.jpg", horizontalPoster: "lib/images/horizontalSplatoon2.jpg",
+    desc: "A colorful and competitive third-person shooter game for the Nintendo Switch. Players take on the role of Inklings, characters who can transform between human and squid form. The objective is to cover as much of the map as possible with your team's colored ink, while also trying to splatter opponents with your various ink-based weapons.",
+     preview1: "lib/images/Preview1Spla2.jpg",preview2: "lib/images/Preview2Spla2.jpg",preview3: "lib/images/Preview3Spla2.jpg",rating: "4.8");
+    
 
   @override
   _SplatoonPageState createState() => _SplatoonPageState();
