@@ -26,7 +26,7 @@ class _CartPageState extends State<CartPage> {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('Your Cart'),
+        title: const Text('Your Cart'),
       ),
       body: ListView(
         children: groupedCart.entries.map((entry) {
@@ -42,7 +42,7 @@ class _CartPageState extends State<CartPage> {
                   fontWeight: FontWeight.bold,
                   fontSize: 16,
                 )),
-            subtitle: Text("RM $totalPrice",style: const TextStyle(
+            subtitle: Text("RM $totalPrice", style: const TextStyle(
                   color: Colors.black,
                   fontSize: 14,
                 )),
@@ -50,33 +50,43 @@ class _CartPageState extends State<CartPage> {
               mainAxisSize: MainAxisSize.min,
               children: [
                 IconButton(
-                  icon: Icon(Icons.remove_circle_outline),
+                  icon: const Icon(Icons.remove_circle_outline),
                   onPressed: () {
                     for (var cartItem in cartItems) {
                       if (cartItem.quantity > 1) {
                         shop.decrementQuantity(cartItem.game);
                         cartItem.quantity--;
+                        setState(() {});
                         break;
                       } else {
                         shop.removeFromCart(cartItem.game);
                         cartItems.remove(cartItem);
+                        setState(() {});
                         break;
                       }
                     }
-                    setState(() {});
                   },
                 ),
-                Text('${cartItems.length}', style: const TextStyle(
-                  color: Colors.black,
-                  fontWeight: FontWeight.bold,
-                  fontSize: 14,
-                )),
+
+                Text(
+                  "${cartItems.length}".padLeft(2, '0'),
+                  style: const TextStyle(
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 14,
+                  ),
+                  textAlign: TextAlign.right,
+                ),
+
                 IconButton(
-                  icon: Icon(Icons.add_circle_outline),
+                  icon: const Icon(Icons.add_circle_outline),
                   onPressed: () {
-                    shop.incrementQuantity(cartItems.first.game);
-                    cartItems.first.quantity++;
-                    setState(() {});
+                    for (var cartItem in cartItems) {
+                      shop.incrementQuantity(cartItem.game);
+                      cartItem.quantity++;
+                      setState(() {});
+                      break;
+                    }
                   },
                 ),
               ],

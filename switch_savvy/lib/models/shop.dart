@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:to_do_app/models/cartItem.dart';
 import 'game.dart';
 
 class Shop extends ChangeNotifier{
@@ -53,14 +53,15 @@ void decrementQuantity(Game game) {
     }
   }
 
-  void incrementQuantity(Game game) {
-    int index = _cart.indexOf(game);
-    if (index != -1) {
-      _cart[index].quantity++;
-      notifyListeners();
-    } else {
-      _cart.add(game);
-      notifyListeners();
+  
+    void incrementQuantity(Game game) {
+      int index = _cart.indexOf(game);
+      if (index != -1) {
+        _cart[index].quantity++;
+        notifyListeners();
+      } else {
+        _cart.add(game);
+        notifyListeners();
+      }
     }
-  }
 }
