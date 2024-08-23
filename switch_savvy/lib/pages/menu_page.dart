@@ -17,9 +17,9 @@ class MenuPage extends StatefulWidget {
 
 class _MenuPageState extends State<MenuPage> {
   List<Game> gameCatalog = [
-    Game(name: "Fae Farm", price: "230.00", imagePath: "lib/images/Faefarm.jpg", horizontalPoster: "lib/images/horizontalFaefarm.jpg",
-    desc: "Escape to the world of Fae Farm and create your own cozy home in the enchanted world of Azoria. As you nurture and grow your homestead, you'll get to meet charming characters, foster deep relationships and discover ways to infuse magic into everything you do. Customize your character, master the arts of crafting, cooking, potion-making and discover so much more.",
-    preview1: "lib/images/Preview1FF.jpg",preview2: "lib/images/Preview2FF.jpg",preview3: "lib/images/Preview3FF.jpg",rating: "4.1"),
+    //Game(name: "Fae Farm", price: "230.00", imagePath: "lib/images/Faefarm.jpg", horizontalPoster: "lib/images/horizontalFaefarm.jpg",
+    //desc: "Escape to the world of Fae Farm and create your own cozy home in the enchanted world of Azoria. As you nurture and grow your homestead, you'll get to meet charming characters, foster deep relationships and discover ways to infuse magic into everything you do. Customize your character, master the arts of crafting, cooking, potion-making and discover so much more.",
+    //preview1: "lib/images/Preview1FF.jpg",preview2: "lib/images/Preview2FF.jpg",preview3: "lib/images/Preview3FF.jpg",rating: "4.1"),
     Game(name: "Lemon Cake", price: "250.00", imagePath: "lib/images/LemonCake.jpg", horizontalPoster: "lib/images/horizontalLemonCake.jpg",
     desc: "Mix ingredients together to prepare all kinds of recipes, including baked pastries, candies and frozen desserts! Be sure to serve your customers quickly and keep your window display well stocked so you don’t miss out on any order! Serve coffee to impatient customers to keep them around the bakery a bit longer and build an adorable cat cafe to make everyone’s day brighter!",
     preview1: "lib/images/Preview1LC.jpg",preview2: "lib/images/Preview2LC.jpg",preview3: "lib/images/Preview3LC.jpg",rating: "4.5"),
