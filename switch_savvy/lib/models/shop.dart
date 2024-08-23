@@ -41,4 +41,26 @@ class Shop extends ChangeNotifier{
     _cart.remove(game);
     notifyListeners();
   }
+
+void decrementQuantity(Game game) {
+    int index = _cart.indexOf(game);
+    if (index != -1 && _cart[index].quantity > 1) {
+      _cart[index].quantity--;
+      notifyListeners();
+    } else if (index != -1) {
+      _cart.removeAt(index);
+      notifyListeners();
+    }
+  }
+
+  void incrementQuantity(Game game) {
+    int index = _cart.indexOf(game);
+    if (index != -1) {
+      _cart[index].quantity++;
+      notifyListeners();
+    } else {
+      _cart.add(game);
+      notifyListeners();
+    }
+  }
 }

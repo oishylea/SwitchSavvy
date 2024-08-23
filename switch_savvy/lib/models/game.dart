@@ -8,6 +8,7 @@ class Game {
   String preview2;
   String preview3;
   String rating;
+  int quantity;
 
   Game({
     required this.name,
@@ -18,7 +19,8 @@ class Game {
     required this.preview1,
     required this.preview2,
     required this.preview3,
-    required this.rating
+    required this.rating,
+    this.quantity = 1,
   });
 
   String get _name =>name;
@@ -30,4 +32,5 @@ class Game {
   String get _preview2 => preview2;
   String get _preview3 => preview3;
   String get _rating => rating;
+
 }
