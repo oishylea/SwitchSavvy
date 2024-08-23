@@ -2,14 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:to_do_app/models/cartItem.dart';
 import '../models/shop.dart';
+
 class CartPage extends StatefulWidget {
   @override
   _CartPageState createState() => _CartPageState();
 }
 
 class _CartPageState extends State<CartPage> {
-  // ...
-
   @override
   Widget build(BuildContext context) {
     final shop = Provider.of<Shop>(context);
@@ -25,7 +24,6 @@ class _CartPageState extends State<CartPage> {
       }
     }
 
-
     return Scaffold(
       appBar: AppBar(
         title: Text('Your Cart'),
@@ -39,8 +37,15 @@ class _CartPageState extends State<CartPage> {
           );
           return ListTile(
             leading: Image.asset(cartItems.first.game.imagePath),
-            title: Text(entry.key),
-            subtitle: Text("RM $totalPrice"),
+            title: Text(entry.key, style: const TextStyle(
+                  color: Colors.black,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 16,
+                )),
+            subtitle: Text("RM $totalPrice",style: const TextStyle(
+                  color: Colors.black,
+                  fontSize: 14,
+                )),
             trailing: Row(
               mainAxisSize: MainAxisSize.min,
               children: [
@@ -58,14 +63,20 @@ class _CartPageState extends State<CartPage> {
                         break;
                       }
                     }
+                    setState(() {});
                   },
                 ),
-                Text('${cartItems.length}'),
+                Text('${cartItems.length}', style: const TextStyle(
+                  color: Colors.black,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 14,
+                )),
                 IconButton(
                   icon: Icon(Icons.add_circle_outline),
                   onPressed: () {
                     shop.incrementQuantity(cartItems.first.game);
                     cartItems.first.quantity++;
+                    setState(() {});
                   },
                 ),
               ],
