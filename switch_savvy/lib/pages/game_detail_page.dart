@@ -187,6 +187,8 @@ class _GameDetailPageState extends State<GameDetailPage> {
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20),
                       ),
+                      minimumSize: const Size(130, 40), // Adjust the width and height as needed
+
                     ),
                     child: const Text('Add to Cart', style: TextStyle(color: Colors.black)),
                   ),

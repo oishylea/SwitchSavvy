@@ -186,7 +186,7 @@ leading: SizedBox(
               ],
             ),
             const SizedBox(height: 16),
-               Align(
+Align(
   alignment: Alignment.centerRight,
   child: ElevatedButton(
     onPressed: () {
@@ -216,6 +216,7 @@ leading: SizedBox(
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(20),
       ),
+      minimumSize: const Size(140, 40),
     ),
     child: const Text('Place Order', style: TextStyle(color: Colors.black)),
   ),
