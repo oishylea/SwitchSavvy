@@ -185,6 +185,23 @@ leading: SizedBox(
                 ),
               ],
             ),
+            const SizedBox(height: 16),
+                Align(
+                  alignment: Alignment.centerRight,
+                  child: ElevatedButton(
+                    onPressed: () {
+                      //addToCart();
+                      Navigator.pushNamed(context, '/placeorder');
+                    },
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.white,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                    ),
+                    child: const Text('Place Order', style: TextStyle(color: Colors.black)),
+                  ),
+                ),
           ],
         ),
       ),
