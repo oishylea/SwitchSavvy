@@ -25,12 +25,19 @@ class _CartPageState extends State<CartPage> {
       }
     }
 
-    // // Calculate the total price
-    double totalPrice = cart.fold(
+    // Calculate the total price
+    double subtotalPrice = cart.fold(
       0.0,
       (sum, cartItem) => sum + (double.parse(cartItem.price) * cartItem.quantity),
-   );
+    );
 
+    double totalPrice;
+    if (subtotalPrice > 0) {
+      totalPrice = (subtotalPrice + 7);
+    } else {
+      totalPrice = 0;
+    }
+   
     return Scaffold(
       appBar: AppBar(
         title: const Text('Your Cart'),
@@ -117,24 +124,24 @@ leading: SizedBox(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 const Text(
-                  "Total Price",
+                  "Subtotal",
                       style: const TextStyle(
                         color: Colors.black,
-                        fontWeight: FontWeight.bold,
+                        //fontWeight: FontWeight.bold,
                         fontSize: 15,
                       ),
                 ),
                 Text(
-                  "RM $totalPrice.00",
+                  "RM $subtotalPrice.00",
                       style: const TextStyle(
                         color: Colors.black,
-                        fontWeight: FontWeight.bold,
+                        //fontWeight: FontWeight.bold,
                         fontSize: 15,
                       ),
                 ),
               ],
             ),
-            const SizedBox(height: 16),
+            const SizedBox(height: 14),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -142,12 +149,34 @@ leading: SizedBox(
                   "Shipping",
                                         style: const TextStyle(
                         color: Colors.black,
+                        //fontWeight: FontWeight.bold,
+                        fontSize: 15,
+                      ),
+                ),
+                Text(
+                  "RM 7.00",
+                                        style: const TextStyle(
+                        color: Colors.black,
+                        //fontWeight: FontWeight.bold,
+                        fontSize: 15,
+                      ),
+                ),
+              ],
+            ),
+            const SizedBox(height: 14),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                const Text(
+                  "Total Price",
+                                        style: const TextStyle(
+                        color: Colors.black,
                         fontWeight: FontWeight.bold,
                         fontSize: 15,
                       ),
                 ),
                 Text(
-                  "RM 10",
+                  "RM $totalPrice.00",
                                         style: const TextStyle(
                         color: Colors.black,
                         fontWeight: FontWeight.bold,
