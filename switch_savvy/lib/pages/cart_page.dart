@@ -26,10 +26,10 @@ class _CartPageState extends State<CartPage> {
     }
 
     // // Calculate the total price
-    // double totalPrice = cart.fold(
-    //   0.0,
-    //   (sum, cartItem) => sum + (double.parse(cartItem.game.price) * cartItem.quantity),
-    // );
+    double totalPrice = cart.fold(
+      0.0,
+      (sum, cartItem) => sum + (double.parse(cartItem.price) * cartItem.quantity),
+   );
 
     return Scaffold(
       appBar: AppBar(
@@ -103,57 +103,57 @@ class _CartPageState extends State<CartPage> {
           ),
 
 
-Container(
-  color: primaryColor,
-  padding: const EdgeInsets.all(25),
-  child: Column(
-    children: [
-      Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          const Text(
-            "Total",
-            style: TextStyle(
-              color: Colors.black,
-              fontWeight: FontWeight.bold,
-              fontSize: 16,
+      Container(
+        color: primaryColor,
+        padding: const EdgeInsets.all(25),
+        child: Column(
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                const Text(
+                  "Total Price",
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 16,
+                  ),
+                ),
+                Text(
+                  "RM $totalPrice",
+                  style: const TextStyle(
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 16,
+                  ),
+                ),
+              ],
             ),
-          ),
-          Text(
-            "RM 55555",
-            style: const TextStyle(
-              color: Colors.black,
-              fontWeight: FontWeight.bold,
-              fontSize: 16,
+            const SizedBox(height: 16),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                const Text(
+                  "Shipping",
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 16,
+                  ),
+                ),
+                Text(
+                  "RM 10",
+                  style: const TextStyle(
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 16,
+                  ),
+                ),
+              ],
             ),
-          ),
-        ],
+          ],
+        ),
       ),
-      const SizedBox(height: 16),
-      Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          const Text(
-            "Shipping",
-            style: TextStyle(
-              color: Colors.black,
-              fontWeight: FontWeight.bold,
-              fontSize: 16,
-            ),
-          ),
-          Text(
-            "RM 10",
-            style: const TextStyle(
-              color: Colors.black,
-              fontWeight: FontWeight.bold,
-              fontSize: 16,
-            ),
-          ),
-        ],
-      ),
-    ],
-  ),
-),
 
         ],
       ),
