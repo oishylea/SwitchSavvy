@@ -16,7 +16,7 @@ class _PaymentPageState extends State<PaymentPage> {
       body: Center(
         child: SingleChildScrollView(
           child: Padding(
-            padding: const EdgeInsets.all(16.0),
+            padding: const EdgeInsets.all(15.0),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
@@ -32,12 +32,12 @@ class _PaymentPageState extends State<PaymentPage> {
                   crossAxisSpacing: 10,
                   mainAxisSpacing: 10,
                   children: [
-                    _buildCartItem("lib/images/applepay.png"),
+                    _buildCartItem("lib/images/grabpay.png"),
                     _buildCartItem("lib/images/shopeepay.png"),
                     _buildCartItem("lib/images/tng.png"),
-                    _buildCartItem("lib/images/grabpay.png"),
-                    _buildCartItem("lib/images/fpx.png"),
+                    _buildCartItem("lib/images/applepay.png"),
                     _buildCartItem("lib/images/duitnow.png"),
+                    _buildCartItem("lib/images/fpx.png"),
                     _buildCartItem("lib/images/visa.png"),
                     _buildCartItem("lib/images/paypal.png"),
 
@@ -89,10 +89,10 @@ class ItemDetailPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(itemName),
+        title: Text("Payment"),
       ),
       body: Center(
-        child: Text('Item Detail Page'),
+        child: Text('Payment Successful'),
       ),
     );
   }
