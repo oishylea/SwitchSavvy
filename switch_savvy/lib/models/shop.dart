@@ -56,7 +56,7 @@ void decrementQuantity(Game game) {
 
     void incrementQuantity(Game game) {
       int index = _cart.indexOf(game);
-      if (index != -1) {
+      if (index != -1 && _cart[index].quantity > 1) {
         _cart[index].quantity++;
         notifyListeners();
       } else {

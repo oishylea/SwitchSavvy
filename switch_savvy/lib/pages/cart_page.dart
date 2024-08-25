@@ -46,13 +46,18 @@ class _CartPageState extends State<CartPage> {
                   (sum, cartItem) => sum + (double.parse(cartItem.game.price) * cartItem.quantity),
                 );
                 return ListTile(
-                  leading: Image.asset(cartItems.first.game.imagePath),
-                  title: Text(entry.key, style: const TextStyle(
+leading: SizedBox(
+  height: 500, // Set the desired height of the image
+  child: Image.asset(
+    cartItems.first.game.imagePath,
+    fit: BoxFit.contain,
+  ),
+),                  title: Text(entry.key, style: const TextStyle(
                     color: Colors.black,
                     fontWeight: FontWeight.bold,
                     fontSize: 16,
                   )),
-                  subtitle: Text("RM $itemTotalPrice", style: const TextStyle(
+                  subtitle: Text("RM $itemTotalPrice.00", style: const TextStyle(
                     color: Colors.black,
                     fontSize: 14,
                   )),
@@ -113,19 +118,19 @@ class _CartPageState extends State<CartPage> {
               children: [
                 const Text(
                   "Total Price",
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 16,
-                  ),
+                      style: const TextStyle(
+                        color: Colors.black,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 15,
+                      ),
                 ),
                 Text(
-                  "RM $totalPrice",
-                  style: const TextStyle(
-                    color: Colors.black,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 16,
-                  ),
+                  "RM $totalPrice.00",
+                      style: const TextStyle(
+                        color: Colors.black,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 15,
+                      ),
                 ),
               ],
             ),
@@ -135,19 +140,19 @@ class _CartPageState extends State<CartPage> {
               children: [
                 const Text(
                   "Shipping",
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 16,
-                  ),
+                                        style: const TextStyle(
+                        color: Colors.black,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 15,
+                      ),
                 ),
                 Text(
                   "RM 10",
-                  style: const TextStyle(
-                    color: Colors.black,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 16,
-                  ),
+                                        style: const TextStyle(
+                        color: Colors.black,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 15,
+                      ),
                 ),
               ],
             ),
