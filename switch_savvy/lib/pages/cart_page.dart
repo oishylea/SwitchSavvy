@@ -186,22 +186,40 @@ leading: SizedBox(
               ],
             ),
             const SizedBox(height: 16),
-                Align(
-                  alignment: Alignment.centerRight,
-                  child: ElevatedButton(
-                    onPressed: () {
-                      //addToCart();
-                      Navigator.pushNamed(context, '/placeorder');
-                    },
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.white,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(20),
-                      ),
-                    ),
-                    child: const Text('Place Order', style: TextStyle(color: Colors.black)),
-                  ),
-                ),
+               Align(
+  alignment: Alignment.centerRight,
+  child: ElevatedButton(
+    onPressed: () {
+      if (totalPrice > 0) {
+        Navigator.pushNamed(context, '/payment');
+      } else {
+        // Display a message to the user
+        showDialog(
+          context: context,
+          builder: (context) => AlertDialog(
+            title: Text('Error'),
+            content: Text('I would be delighted to facilitate the addition of an item to your shopping cart in order to proceed to the payment page. Thank you very much for your understanding.'),
+            actions: [
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).pop();
+                },
+                child: Text('OK'),
+              ),
+            ],
+          ),
+        );
+      }
+    },
+    style: ElevatedButton.styleFrom(
+      backgroundColor: Colors.white,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(20),
+      ),
+    ),
+    child: const Text('Place Order', style: TextStyle(color: Colors.black)),
+  ),
+),
           ],
         ),
       ),

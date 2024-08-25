@@ -7,7 +7,7 @@ import 'pages/cart_page.dart';
 import 'pages/game_detail_page.dart';
 import 'pages/menu_page.dart';
 import 'pages/intro_page.dart';
-import 'pages/placeorder_page.dart';
+import 'pages/payment_page.dart';
 
 void main() {
   runApp(DevicePreview(
@@ -34,7 +34,7 @@ class MyApp extends StatelessWidget {
           '/menupage': (context) => const MenuPage(),
           '/game_detail': (context) => GameDetailPage(game: ModalRoute.of(context)!.settings.arguments as Game),
           '/cart': (context) => CartPage(),
-          '/placeorder': (context) => PlaceOrderPage(),
+          '/payment': (context) => PaymentPage(),
         },
       ),
     );
