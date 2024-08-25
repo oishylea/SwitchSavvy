@@ -14,53 +14,70 @@ class _PaymentPageState extends State<PaymentPage> {
         title: Text('Payment'),
       ),
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text('Choose Payment Method'),
-            SizedBox(height: 20),
-            _buildCartItem(
-              "lib/images/applepay.png",
+        child: SingleChildScrollView(
+          child: Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Text(
+                  'Choose Payment Method',
+                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                ),
+                SizedBox(height: 15),
+                GridView.count(
+                  physics: NeverScrollableScrollPhysics(),
+                  shrinkWrap: true,
+                  crossAxisCount: 2,
+                  crossAxisSpacing: 10,
+                  mainAxisSpacing: 10,
+                  children: [
+                    _buildCartItem("lib/images/applepay.png"),
+                    _buildCartItem("lib/images/shopeepay.png"),
+                    _buildCartItem("lib/images/tng.png"),
+                    _buildCartItem("lib/images/grabpay.png"),
+                    _buildCartItem("lib/images/fpx.png"),
+                    _buildCartItem("lib/images/duitnow.png"),
+                    _buildCartItem("lib/images/visa.png"),
+                    _buildCartItem("lib/images/paypal.png"),
+
+                  ],
+                ),
+              ],
             ),
-          ],
+          ),
         ),
       ),
     );
   }
 
- Widget _buildCartItem(String imageUrl) {
-  return GestureDetector(
-    onTap: () {
-      // Navigate to the detailed page for the item
-      Navigator.push(
-        context,
-        MaterialPageRoute(
-          builder: (context) => ItemDetailPage(itemName: imageUrl),
-        ),
-      );
-    },
-    child: Container(
-      decoration: BoxDecoration(
-        color: Colors.grey[100],
-        borderRadius: BorderRadius.circular(20),
-      ),
-      margin: const EdgeInsets.only(left: 25, right: 25, bottom: 10),
-      padding: const EdgeInsets.all(20),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Align(
-            alignment: Alignment.center,
-            child: Image.asset(
-              imageUrl,
-              height: 100,
-            ),
+  Widget _buildCartItem(String imageUrl) {
+    return GestureDetector(
+      onTap: () {
+        // Navigate to the detailed page for the item
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => ItemDetailPage(itemName: imageUrl),
           ),
-        ],
+        );
+      },
+      child: Container(
+        decoration: BoxDecoration(
+          color: Colors.grey[100],
+          borderRadius: BorderRadius.circular(20),
+        ),
+        padding: const EdgeInsets.all(20),
+        child: Align(
+          alignment: Alignment.center,
+          child: Image.asset(
+            imageUrl,
+            height: 80,
+          ),
+        ),
       ),
-    ),
-  );
-}
+    );
+  }
 }
 
 class ItemDetailPage extends StatelessWidget {
