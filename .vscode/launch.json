@@ -1,0 +1,28 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "switch_savvy",
+            "cwd": "switch_savvy",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "switch_savvy (profile mode)",
+            "cwd": "switch_savvy",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "switch_savvy (release mode)",
+            "cwd": "switch_savvy",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        }
+    ]
+}
