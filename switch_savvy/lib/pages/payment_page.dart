@@ -86,14 +86,24 @@ class ItemDetailPage extends StatelessWidget {
   ItemDetailPage({required this.itemName});
 
   @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("Payment"),
+Widget build(BuildContext context) {
+  return Scaffold(
+    appBar: AppBar(
+      title: Text("Payment"),
+    ),
+    body: Center(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Image.asset(
+            'lib/images/payment.png',
+            height: 150,
+          ),
+          SizedBox(height: 16.0),
+          Text('Payment Successful'),
+        ],
       ),
-      body: Center(
-        child: Text('Payment Successful'),
-      ),
-    );
-  }
+    ),
+  );
+}
 }
