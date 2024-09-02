@@ -14,5 +14,5 @@ SwitchSavvy is a comprehensive Nintendo Switch game discovery and management app
 - **Dart**: The app is written in the Dart programming language, which is the primary language used for Flutter development. 🎯
 
 <br>
-p/s : I'm developing this app for fun and it's my first time developing an app. 🎉 Any feedback or suggestions are welcome! 💡
+p/s : I'm developing this app for fun 🎉 Any feedback or suggestions are welcome! 💡
 <br>
