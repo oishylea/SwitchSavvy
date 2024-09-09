@@ -2,11 +2,9 @@
 
 SwitchSavvy is a comprehensive Nintendo Switch game discovery and management app, built using the Flutter framework. It aims to be the go-to resource for Switch gamers who demand a smart, curated, and personalized experience.
 
-## Features 🌟
+## Feature 🌟
 
 - **Add to Cart**: Users can add games to their shopping cart🛒
-- **Add to Favorites**: Users can mark their favorite games, creating a personalized list for easy access and discovery. ❤️
-- **See Available Games**: Users can browse the extensive game catalog, view detailed information about each title, and see which games are currently available for purchase. 🎮
 
 ## Technologies Used 🛠️
 
